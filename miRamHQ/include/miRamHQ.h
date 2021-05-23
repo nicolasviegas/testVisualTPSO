@@ -29,7 +29,7 @@
 
 #define CONFIG_PATH "./cfg/miRamHq.config"
 #define CONEXIONES_PATH "../shared/cfg/conexiones.config"  //carpeta compartida con el resto del tp 
-#define LOG_PATH "/.cfg/miRamHQ.txt"
+#define LOG_PATH "/.cfg/miRamHQ.log"
 
 char* IP;
 t_config* conexiones_config;
@@ -40,13 +40,11 @@ int tamanio_memoria;
 int tamanio_swap;
 int* bitarray_memoria;
 int* bitarray_swap;
-//t_tripulante* memoria_principal;
-//t_tripulante* memoria_swap;
-/*
+t_tripulante* memoria_principal;
+t_tripulante* memoria_swap;
 
+int modulo;
 
-
- */
 typedef struct
 {
 	int idTripulante;
@@ -60,7 +58,11 @@ typedef struct
 } t_tripulante;
 
 
+
 /* 
+AGREGAR LAS STRUCTS DE MANERA CORRECTA
+
+
 typedef struct
 {
     uint64_t timestamp;
